@@ -1,0 +1,11 @@
+
+User login:
+	
+	- Vad händer om en användare är inloggad och det görs ett login försök till samma användare.
+
+Requirement:
+	
+	-User is logged in
+	-Login attempt is made
+	-Login denied
+	-Show message that user is already logged in
