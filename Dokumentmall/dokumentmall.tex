@@ -1,0 +1,147 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{article}
+
+% --------------------------------------------------------------------
+% General Page Layout
+% --------------------------------------------------------------------
+\usepackage[a4paper]{geometry}
+\usepackage[parfill]{parskip}
+\setlength{\oddsidemargin}{5mm}		% Remove 'twosided' indentation
+\setlength{\evensidemargin}{5mm}
+%%
+% --------------------------------------------------------------------
+% Encoding and Language Settings
+% --------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}			% encoding may need to be changed depending on the system
+\usepackage[swedish]{babel}
+\usepackage{lipsum}					% Lorem Ipsum
+
+% --------------------------------------------------------------------
+% Utilities (colors, links, pictures, ect...)
+% --------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[round]{natbib}
+\usepackage{float}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% -------------------------------------------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)			%
+% -------------------------------------------------------------------------------------------------------------%
+																%
+% Horizontal rule													%
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   							%
+																%
+% Document Number												%
+\newcommand{\documentNumber}[1]{\centering PUSP1742#1 \\[1.0cm]}	 		%
+																%
+% Document Version													%
+\newcommand{\documentVersion}[1]{\centering \small{v.#1} \\[1.0cm]}	 		%
+																%
+% Title															%
+\makeatletter                           											%
+\def\printtitle{%                       											%
+    {\centering \@title\par}}												%
+\makeatother                                    										%
+																%
+% Author															%
+\makeatletter                           											%
+\def\printauthor{%                  											%
+    {\centering \large \@author}}               									%
+\makeatother														%
+																%
+\newcommand{\grouptitlepage}[4]{										%
+	\title{ 														%
+	\documentNumber{#1}											%
+	\documentVersion{#2}											%
+	\HRule{0.5pt} \\ % Upper rule										%
+	\LARGE \textbf{\uppercase{#3}} \\  									%
+	\large \textbf{\uppercase{ETSF20 Grupp 2}}							%
+	\HRule{2pt} \\ [0.5cm]      	% Lower rule + 0.5cm spacing					%
+	\normalsize          		% Todays date								%
+	}															%
+	\author{#4}													%
+	\maketitle														%
+	\tableofcontents												%
+	\thispagestyle{empty} 											%
+	\newpage														%
+}																%
+																%
+% -------------------------------------------------------------------------------------------------------------%
+% Title Page / Document Class Definitions (Please Don't Play With This)			%
+% -------------------------------------------------------------------------------------------------------------%
+\date{}                                           	% Activate to display a given date or no date
+
+
+% -------------------------------------------------------------------------------------------------------------
+% DOCUMENT START (YOU CAN IGNORE EVERYTHING ABOVE HERE)					
+% -------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+% ---------------------------------------------------------------------------------------------------------------------------------------
+% Title Page START: \grouptitlepage{doc number}{Version Number}{doc title}{group responsible for doc}		
+% ---------------------------------------------------------------------------------------------------------------------------------------
+\grouptitlepage
+%Document Code Number (same as time reports)
+{\#\#	}
+%Document Version Number										
+{0.1}
+%Document Title		Dokumentmall							
+{Dokumentmall}
+%Group Responsible For Document									
+{(PG) Projekt Grupp: \\ Gregory Austin \\ Andreas Mårdén}	
+% -------------------------------------------------------------------------------------------------------------
+% Title Page END				
+% -------------------------------------------------------------------------------------------------------------
+
+\section{Sektion Exempel}
+\lipsum[1]
+
+\subsection{Subsektion Exempel}
+
+\paragraph{Paragraf exempel}
+\lipsum[2]
+
+\section{Listor}
+
+\subsection{Listor med punkter}
+
+\begin{itemize}
+\item Punkter
+\item Punkter
+	\begin{itemize}
+	\item Sub-punkter
+	\item Sub-punkter
+	\end{itemize}
+\item Punkter
+\end{itemize}
+
+\subsection{Listor med nummer}
+
+\begin{enumerate}
+\item Nummer
+\item Nummer
+	\begin{enumerate}
+	\item Sub-nummer
+	\item Sub-nummer
+	\end{enumerate}
+\item Nummer
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
