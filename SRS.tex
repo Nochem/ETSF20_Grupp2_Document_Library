@@ -117,6 +117,19 @@ En projektledare är en specifik användare som har tilldelats rollen “Projekt
 En administratör ska kunna lägga till och ta bort användare i systemet. Den ska även kunna tilldela rollen “Projektledare” till användare. Administratören ska kunna skapa och ta bort projektgrupper och kunna tilldela användare till dessa projektgrupper. Det huvudsakliga målen för en administratör är att kunna lägga till och ta bort användare, lägga till och ta bort projektgrupper och kunna tilldela rollen “Projektledare”.
 
 \section{Terminologi}
+\paragraph{Tidrapport}
+Dokument som används för att rapportera dem timmar man lagt på olika områden i ett arbete/projekt. Används i samband med löne-och projektredovisning.
+\paragraph{Administratör}
+Någon som förvaltar en organisation. I detta projektets fall, ett system.
+\paragraph{Förvaltning}
+Vara ansvarig för ett visst arbete till någons räkning, eller ha hand om en verksamhet.
+\paragraph{Annullera}
+Upphäva, ogiltigförklara något, t.ex annullera en signering av en tidsrapport.
+\paragraph{Projekt}
+Ett uppdrag som utförs av en viss arbetsorganisation för att åstadkomma ett visst resultat. 
+\paragraph{Signering}
+Bekräftar en tidrapport och sätter den i ett stadie där den inte kan ändras om inte projektledare häver signeringen.
+\paragraph{}
 \section{Kontext Diagram}
 
 \section{Funktionella Krav}
@@ -208,6 +221,119 @@ Det finns minst en användare i systemet
 \end{enumerate}
 
 \subsection{Projektledare:}
+
+\subsubsection{Krav} En projektledare ska kunna tilldela roller till projektmedlemmarna i projektgruppen.
+
+\paragraph{}
+\subsubsection{Krav}
+Följande scenario stöds av systemet
+\paragraph{Scenario:}
+Projektleader tilldelar roll till projektmedlem.
+\paragraph{Förkrav}
+Användare är projektledare i gruppen.
+\begin{enumerate} 
+\item Projektledare klickar på "Main".
+\item Projektledare klickar vidare på "Organize group".
+\item En ny sida visas med en lista på medlemmar i projektgruppen.
+\item Projektledare klickar på roll-alternativ på medlem.
+\item Projektledare ändrar/tilldelar rollen.
+\item Tryck på knappen “Update group”.
+\end{enumerate}
+
+\paragraph{}
+\subsubsection{Krav}
+	Projektledaren kan inte tilldela mer än en roll till en medlem i projektgruppen.
+
+\paragraph{}
+\subsubsection{Krav}
+	Projektledaren ska kunna ändra projektmedlemmarnas roller i projektgruppen.
+\paragraph{}
+\subsubsection{Krav}
+De roller som ska finnas tillgängliga är som följande:
+\begin{itemize}
+\item Projektgrupp
+\item Systemgrupp
+\item Utvecklingsgrupp
+\item Testgrupp
+\end{itemize}
+
+\subsubsection{Krav}
+Projektledaren ska kunna signera och godkänna tidrapporter för varje medlem i gruppen.
+
+\paragraph{}
+
+\subsubsection{Krav}
+Följande scenario stöds av systemet.
+\paragraph{Scenario}
+Projektledare ska signera veckorapporter.
+\paragraph{Förkrav}
+Användare är projektledare i gruppen.
+\begin{enumerate}
+\item Projektledaren klickar på “Time Reporting”.
+\item Projektledaren klickar på “Sign Time Reports”.
+\item En lista kommer upp med alla Veckorapporter.
+\item Projektledaren markerar rapporterna som ska signeras och klickar på knappen “Sign”.
+\item När Projektledaren har signerat rapporterna kommer den tillbaka till en uppdaterad lista av rapporterna.
+\end{enumerate}
+
+\paragraph{}
+
+\subsubsection{Krav}
+Signeringen av tidrapport sker veckovis.
+
+\paragraph{}
+
+\subsubsection{Krav}
+Projektledarens egna tidrapport signeras direkt vid tryckning av submit-knappen.
+
+\paragraph{}
+
+\subsubsection{Krav}
+Listan för veckorapporter ska innehålla namn, rapporterad tid per aktivitet, veckonummer, grupptillhörighet och en kryssruta per rapport.
+
+\paragraph{}
+
+\subsubsection{Krav}
+Följande scenario stöds av systemet.
+\paragraph{Scenario} Annullering av redan signerad tidrapport.
+\paragraph{Förkrav} Projektledaren är inloggad.
+\begin{enumerate}
+\item Projektledare klickar på “Time reporting”.
+\item Projektledare klickar på “Unsign reports”.
+\item Projektledaren kryssar för dom signerade rapporter som ska annulleras.
+\item Projektledaren klickar sedan på “Submit changes”.
+\end{enumerate}
+
+\paragraph{}
+
+\subsubsection{Krav}
+ Projektledaren ska, i menyn, ha följande länkar:
+ \begin{itemize}
+ \item “Organize Group”
+ \item "Sign reports"
+ \item "Unsign reports"
+ \item "View all reports"
+ \end{itemize}
+
+\paragraph{}
+
+\subsubsection{Krav}
+Projektledare ska kunna generera sammanställning över all tid som rapporterats i projektet.
+\paragraph{-}
+Sammanställningen ska kunna användas för att producera en sammanställning av statistik.
+
+\paragraph{}
+
+\subsubsection{Krav}
+Projektledaren ska kunna se statistik för tidsrapporter i projektet för varje medlem.
+\paragraph{}
+Tidsrapporter ska kunna summeras och visas per:
+\begin{itemize}
+\item Användare
+\item Roll
+\item Aktivitet
+\item Vecka
+\end{itemize}
 \subsection{Användare:}
  \subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt den är medlem i.
  \paragraph{Scenario:} Användare vill skriva en tidrapport
