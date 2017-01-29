@@ -106,22 +106,22 @@
 	\section{Bakgrund och Mål}
 	
 	\subsection{Huvudmål:}
-	De huvudsakliga målet med systemet är att erbjuda ett funktionellt tidrapporteringssystem som bygger vidare på ett redan givet “BaseBlockSystem”. Detta ska kunna användas av projektgrupper för att enkelt kunna rapportera in arbetstid.
+	Det huvudsakliga målet med systemet är att erbjuda ett funktionellt tidrapporteringssystem som bygger vidare på ett redan givet “BaseBlockSystem”. Systemet ska kunna användas av projektgrupper för att enkelt kunna rapportera in arbetstid.
 	\subsection{Aktörer och deras mål:}
 	Följande huvudaktörer använder systemet:
 	\subsubsection{Användare:}
-	En användare ska ha en roll i projektgruppen. Den ska kunna tidsrapportera, ändra en osignerad tidsrapport. Användaren ska kunna se en sammanställning av sin totala rapporterade tid. Det huvudsakliga målet för en användare är att på ett simpelt sätt kunna tidsrapportera.
+	En användare ska ha en roll i projektgruppen. Den ska kunna tidrapportera, ändra en osignerad tidrapport. Användaren ska kunna se en sammanställning av sin totala rapporterade tid. Det huvudsakliga målet för en användare är att på ett simpelt sätt kunna tidrapportera.
 	\subsubsection{Projektledare:}
-	En projektledare är en specifik användare som har tilldelats rollen “Projektledare” av administratören. En projektledare ska, utöver det en användare kan göra, kunna tilldela de olika rollerna till användarna. Projektledare ska kunna signera och annullera rapporter från övriga projektmedlemmar. Projektledaren ska kunna se en sammanställning av all den totala tid som rapporterats i projektet. De huvudsakliga målen för en projektledare är att kunna rapportera tid, signera tidsrapporter och tilldela roller till projektmedlemmarna. 
+	En projektledare är en specifik användare som har tilldelats rollen “Projektledare” av administratören. En projektledare ska, utöver det som en användare kan göra, kunna tilldela de olika rollerna till användarna. Projektledare ska kunna signera och annullera rapporter från övriga projektmedlemmar. Projektledaren ska kunna se en sammanställning av all den totala tid som rapporterats in i projektet. De huvudsakliga målen för en projektledare är att kunna rapportera tid, signera tidrapporter och tilldela roller till projektmedlemmarna. 
 	\subsubsection{Administratör:}
-	En administratör ska kunna lägga till och ta bort användare i systemet. Den ska även kunna tilldela rollen “Projektledare” till användare. Administratören ska kunna skapa och ta bort projektgrupper och kunna tilldela användare till dessa projektgrupper. Det huvudsakliga målen för en administratör är att kunna lägga till och ta bort användare, lägga till och ta bort projektgrupper och kunna tilldela rollen “Projektledare”.
+	En administratör ska kunna lägga till och ta bort användare i systemet. Den ska även kunna tilldela rollen “Projektledare” till användare. Administratören ska kunna skapa och ta bort projektgrupper samt kunna tilldela användare till dessa projektgrupper. De huvudsakliga målen för en administratör är att kunna lägga till och ta bort användare, lägga till och ta bort projektgrupper samt kunna tilldela rollen “Projektledare”.
 	
 	\includegraphics{kontextdiagram_SRS.png}
 	
 	\section{Terminologi}
 	\paragraph{Tidrapport}
 	\flushleft
-	Dokument som används för att rapportera dem timmar man lagt på olika områden i ett arbete/projekt. Används i samband med löne-och projektredovisning.
+	Dokument som används för att rapportera de timmar som man har lagt på olika områden i ett arbete/projekt används i samband med löne- och projektredovisning.
 	\paragraph{Administratör}
 	\flushleft
 	Någon som förvaltar en organisation. I detta projektets fall, ett system.
@@ -130,7 +130,7 @@
 	Vara ansvarig för ett visst arbete till någons räkning, eller ha hand om en verksamhet.
 	\paragraph{Annullera}
 	\flushleft
-	Upphäva, ogiltigförklara något, t.ex annullera en signering av en tidsrapport.
+	Upphäva, ogiltigförklara något, t.ex. annullera en signering av en tidrapport.
 	\paragraph{Projekt}
 	\flushleft
 	Ett uppdrag som utförs av en viss arbetsorganisation för att åstadkomma ett visst resultat. 
@@ -146,7 +146,7 @@
 	
 	\subsection{Administratör:}
 	\subsubsection{Krav:}
-	När en administratör vill ta bort en projektgrupp ska en varningsruta visas som frågar om admin vill ta bort projektgruppen
+	När en administratör vill ta bort en projektgrupp ska en varningsruta visas som frågar om admin vill ta bort projektgruppen.
 	
 	\subsubsection{Krav:} Följande scenario ska stödjas av systemet.
 	\paragraph{Scenario:}
@@ -156,9 +156,9 @@
 	\paragraph{}
 	\begin{enumerate}
 		\item Admin går till sidan för hantering av projektgrupper
-		\item Admin väljer att lägga till projektgrupp
-		\item Admin uppmanas att mata in namn på projektgrupp
-		\item Projektgrupp skapas
+		\item Admin väljer att lägga till en projektgrupp
+		\item Admin uppmanas att mata in ett namn på projektgruppen
+		\item Projektgruppen skapas
 		\item Admin ser en uppdatering av sidan
 	\end{enumerate}
 	
@@ -183,22 +183,22 @@
 	Admin är inloggad. Ingen användare finns i systemet. Det finns minst en projektgrupp i systemet.
 	\paragraph{}
 	\begin{enumerate}
-		\item Admin går till sida för att hantera medlemmar
+		\item Admin går till sidan för hantering av medlemmar
 		\item Admin lägger till användare i en projektgrupp
-		\item Admin tilldelar användaren rollen projektledare
+		\item Admin tilldelar användaren rollen som projektledare
 		\item Admin ser en uppdatering av sidan
 	\end{enumerate}
 	
 	\subsubsection{Krav:} Följande scenario ska stödjas av systemet. 
 	\paragraph{Scenario:}
-	Admin skall utse projektledare i system med användare.
+	Admin skall utse projektledare med redan existerande användare i systemet.
 	\paragraph{Förkrav:}
 	Admin är inloggad. Det finns minst en användare i systemet. Det finns minst en projektgrupp i systemet.
 	\paragraph{}
 	\begin{enumerate}
 		\item Admin går till sidan för hantering av användare
-		\item Admin utser en användare och tilldelar denna rollen projektledare
-		\item Användaren har enbart rollen projektledare
+		\item Admin utser en användare och tilldelar denna rollen som projektledare
+		\item Användaren har enbart rollen som projektledare
 		\item Admin ser en uppdatering av sidan
 	\end{enumerate}
 	\newpage
@@ -246,21 +246,21 @@
 \subsubsection{Krav:}
 Följande scenario ska stödjas av systemet
 \paragraph{Scenario:}
-Projektleader tilldelar roll till projektmedlem.
+Projektledarer tilldelar en roll till en projektmedlem.
 \paragraph{Förkrav:}
-Användare är projektledare i gruppen.
+Användaren är projektledare i projektgruppen.
 \begin{enumerate} 
 \item Projektledare klickar på "Main"
 \item Projektledare klickar vidare på "Organize group"
 \item En ny sida visas med en lista på medlemmar i projektgruppen.
-\item Projektledare klickar på roll-alternativ på medlem
+\item Projektledare klickar på roll-alternativ för den medlem som ändringen gäller
 \item Projektledare ändrar/tilldelar rollen
 \item Tryck på knappen “Update group”
 \end{enumerate}
 
 \paragraph{}
 \subsubsection{Krav:}
-	Projektledaren kan inte tilldela mer än en roll till en medlem i projektgruppen.
+	Projektledaren kan inte kunna tilldela mer än en roll till en medlem i projektgruppen.
 
 \paragraph{}
 \subsubsection{Krav:}
@@ -287,7 +287,7 @@ Följande scenario ska stödjas av systemet.
 \paragraph{Scenario:}
 Projektledare ska signera veckorapporter.
 \paragraph{Förkrav:}
-Användare är projektledare i gruppen.
+Användaren är projektledare i gruppen.
 \begin{enumerate}
 \item Projektledaren klickar på “Time Reporting”
 \item Projektledaren klickar på “Sign Time Reports”
@@ -318,9 +318,9 @@ Följande scenario ska stödjas av systemet.
 \paragraph{Scenario:} Annullering av redan signerad tidrapport.
 \paragraph{Förkrav:} Projektledaren är inloggad.
 \begin{enumerate}
-\item Projektledare klickar på “Time reporting”
-\item Projektledare klickar på “Unsign reports”
-\item Projektledaren kryssar för dom signerade rapporter som ska annulleras
+\item Projektledaren klickar på “Time reporting”
+\item Projektledaren klickar på “Unsign reports”
+\item Projektledaren kryssar för de signerade rapporterna som ska annulleras
 \item Projektledaren klickar sedan på “Submit changes”
 \end{enumerate}
 
@@ -344,9 +344,9 @@ Sammanställningen ska kunna användas för att producera en sammanställning av
 
 \newpage
 \subsubsection{Krav:}
-Projektledaren ska kunna se statistik för tidsrapporter i projektet för varje medlem.
+Projektledaren ska kunna se statistik för tidrapporter i projektet för varje medlem.
 \paragraph{}
-Tidsrapporter ska kunna summeras och visas per:
+Tidrapporter ska kunna summeras och visas per:
 \begin{itemize}
 \item Användare
 \item Roll
@@ -358,33 +358,33 @@ Tidsrapporter ska kunna summeras och visas per:
 %---------------------------------------------------------------------------------------------------------
 
 	\subsection{Användare:}
-	\subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt den är medlem i.
+	\subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt som den är medlem i.
 	\subsubsection{Krav:} Följande scenario ska stödjas av systemet.
-	\paragraph{Scenario:} Användare vill skriva en tidrapport.
+	\paragraph{Scenario:} En användare vill skriva en tidrapport.
 	\paragraph{Förkrav:}
-	Användare är inloggad i systemet.
+	Användaren är inloggad i systemet.
 	
 	\begin{enumerate}
-		\item	Användare är inloggad i systemet
+		\item	Användaren är inloggad i systemet
 		\item 	Användaren går till sidan för hantering av tidrapport
-		\item 	Användaren fyller i aktuella tider för de olika aktiviteterna Fält kan lämnas tomma om ingen tid har lagts på aktiviteten
+		\item 	Användaren fyller i aktuella tider för de olika aktiviteterna. Fält lämnas tomma om ingen tid har lagts på aktiviteten.
 		\item	Användaren väljer att skicka tidrapporten
 		\item 	Tidrapporten skickas till projektledaren för signering
-		\item Användaren ser en uppdatering av sidan
+		\item 	Användaren ser en uppdatering av sidan
 		
 		
 	\end{enumerate}
 	
 	\subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna uppdatera osignerade tidrapporter i det projektet.
 	\subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna ta bort osignerade tidrapporter i det projektet.
-	\subsubsection{Krav:}En användare ska kunna se all den tid som användaren har rapporterat.
-	\subsubsection{Krav:}En användare får endast ha ingen eller en roll i projektgruppen.
+	\subsubsection{Krav:} En användare ska kunna se all den tid som användaren har rapporterat.
+	\subsubsection{Krav:} En användare får endast ha en eller ingen roll i projektgruppen.
 	\subsubsection{Krav:} Följande scenario ska stödjas av systemet.
-	\paragraph{Scenario:}Användare vill uppdatera i tidrapport
+	\paragraph{Scenario:} Användaren vill uppdatera sin tidrapport
 	\paragraph{Förkrav:}
-	Användare är inloggad i systemet, tidsrapport är osignerad.
+	Användaren är inloggad i systemet och användarens tidrapport är osignerad.
 	\begin{enumerate}
-		\item Användaren klickar på “Time Reporting”
+		\item	Användaren klickar på “Time Reporting”
 		\item	Användaren klickar på “Edit time report”
 		\item	Användaren kommer till en sida som innehåller en meny med användarens osignerade tidrapporter
 		\item 	Användaren klickar på en tidrapport
@@ -407,32 +407,32 @@ Tidsrapporter ska kunna summeras och visas per:
 	\end{enumerate}
 	\newpage
 	\subsubsection{Krav:} Följande scenario ska stödjas av systemet.
-	\paragraph{Scenario:}Användare vill ändra lösenord.
+	\paragraph{Scenario:}Användaren vill ändra lösenord.
 	\paragraph{Förkrav:}
-	Användare är inloggad i systemet.
+	Användaren är inloggad i systemet.
 	\paragraph{}
 	\begin{enumerate}
 		\item	Användaren trycker på “Change Password” i menyn
-		\item	En sida visas som innehåller relevanta textboxar
-		\item	Användaren fyller i nuvarande lösenord i första textboxen
-		\item	Användaren fyller i det nya lösenordet i den andra textboxen
-		\item	Användaren upprepar det nya lösenordet i den tredje textboxen
+		\item	En sida visas som innehåller relevanta textfält
+		\item	Användaren fyller i nuvarande lösenord i det första textfältet
+		\item	Användaren fyller i det nya lösenordet i det andra textfältet
+		\item	Användaren upprepar det nya lösenordet i det tredje textfältet
 		\item	Användaren trycker på knappen “Change Password”
 		\item	Lösenordet för användaren ändras i systemet. Detta visas på följande sida
 		
 	\end{enumerate}
 	
 	\subsubsection{Krav:}Följande scenario ska stödjas av systemet.
-	\paragraph{Scenario:}Användare vill ändra lösenord (ogiltig inmatning)
+	\paragraph{Scenario:}Användaren vill ändra lösenord (ogiltig inmatning)
 	\paragraph{Förkrav:}
 	Användaren är inloggad i systemet.
 	\paragraph{}
 	\begin{enumerate}
 		\item  Användaren trycker på “Change Password” i menyn
-		\item	 En sida visas som innehåller relevanta textboxar
-		\item	Användaren fyller i nuvarande lösenord i första textboxen
-		\item	Användaren fyller i det nya lösenordet som inte uppfyller krav 6.2.3 i PUSS12002 version: 1.0 för “BaseBlockSystem” i den andra textboxen
-		\item	Användaren upprepar det nya lösenordet i den tredje textboxen
+		\item	 En sida visas som innehåller relevanta textfält
+		\item	Användaren fyller i nuvarande lösenord i det första textfältet
+		\item	Användaren fyller i det nya lösenordet som inte uppfyller krav 6.2.3 i PUSS12002 version: 1.0 för “BaseBlockSystem” i det andra textfältet
+		\item	Användaren upprepar det nya lösenordet i det tredje textfältet
 		\item	Användaren trycker på knappen “Change Password”
 		\item	Lösenordet ändras inte och ett felmeddelande visas
 		\item Användaren skickas tillbaka till steg 2
