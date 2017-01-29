@@ -98,7 +98,8 @@
 % -------------------------------------------------------------------------------------------------------------
 % Title Page END				
 % -------------------------------------------------------------------------------------------------------------
-\section{Inledning}
+\section{Introduktion}
+Detta dokument beskriver kraven för ett tidrapporteringssystem, baserat på “BaseBlockSystem”. Det är ett system där man främst kan skapa och lagra tidrapporter för enskilda medlemmar i ett projekt. Se referens dokumentet nedan för mer ingående förklaring av systemet.
 \section{Referensdokument}
 Base block System SRS: \textbf{\textit{PUSS12002 version: 1.0}}  gäller för alla punkter. Det som står i detta dokument gäller om det inte är specificerat i respektive underrubrik att det som står i \textbf{\textit{PUSS12002 version: 1.0}}  utgår för specifik del.
 
@@ -208,6 +209,82 @@ Det finns minst en användare i systemet
 
 \subsection{Projektledare:}
 \subsection{Användare:}
+ \subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt den är medlem i.
+ \paragraph{Scenario:} Användare vill skriva en tidrapport
+  \paragraph{ }
+  Förkrav: Användare är inloggad i systemet.
+ 
+ \begin{enumerate}
+\item	Användare är inloggad i systemet.
+\item 	Användaren går till sidan för hantering av tidrapport
+\item 	Användaren fyller i aktuella tider för de olika aktiviteterna. Fält kan lämnas tomma om ingen tid har lagts på aktiviteten.
+\item	Användaren väljer att skicka tidrapporten.
+\item 	Tidrapporten skickas till projektledaren för signering.
+ \item Användaren ser en uppdatering av sidan.
+ 	
+ 	
+ \end{enumerate}
+ 
+ \subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna uppdatera osignerade tidrapporter i det projektet.
+ \subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna ta bort osignerade tidrapporter i det projektet.
+\subsubsection{Krav:}En användare ska kunna se all den tid som användaren har rapporterat.
+\subsubsection{Krav:}En användare får endast ha ingen eller en roll i projektgruppen.
+\subsubsection{Krav:} Följande krav ska stödjas av systemet.
+\paragraph{Scenario:}Användare vill uppdatera i tidrapport
+\paragraph{}
+Förkrav: Användare är inloggad i systemet, tidsrapport är osignerad.
+ \begin{enumerate}
+ \item Användaren klickar på “Time Reporting”.
+ \item	Användaren klickar på “Edit time report”.
+ \item	Användaren kommer till en sida som innehåller en meny med användarens osignerade tidrapporter.
+ \item 	Användaren klickar på en tidrapport.
+ \item	En sida öppnas som visar aktuell tidrapport i form av en tabell med de gamla värdena ifyllda.
+ \item	Användaren ändrar/lägger till värden i tidrapporten.
+ \item	Användaren klickar på “Submit Change”.
+ \item	Den gamla tidrapporten försvinner och den ändrade tidrapporten skickas vidare för signering.
+ \item	“Time Reporting” sidan visas.
+ 	
+ \end{enumerate}
+ \subsubsection{Krav:}Följande krav ska stödjas av systemet.
+ \paragraph{Scenario:}Användare vill se en sammanfattning av sin rapporterade tid.
+ \paragraph{}
+ Förkrav:Användaren är inloggad i systemet.
+ \begin{enumerate}
+\item  Användaren klickar på “Time Reporting” i menyn.
+\item  En ny sida visas som innehåller alternativ för tidrapportering samt en sammanställning för den totalt rapporterade tiden för användaren i form av en tabell.
+
+ \end{enumerate}
+ \subsubsection{Krav:} Följande krav ska stödjas av systemet.
+ \paragraph{Scenario:}Användare vill ändra lösenord.
+ \paragraph{}
+ Förkrav: Användare är inloggad i systemet.
+ 
+ \begin{enumerate}
+ \item	Användaren trycker på “Change Password” i menyn.
+ \item	En sida visas som innehåller relevanta textboxar.
+ \item	Användaren fyller i nuvarande lösenord i första textboxen.
+ \item	Användaren fyller i det nya lösenordet i den andra textboxen.
+ \item	Användaren upprepar det nya lösenordet i den tredje textboxen.
+ \item	Användaren trycker på knappen “Change Password”.
+ \item	Lösenordet för användaren ändras i systemet. Detta visas på följande sida.
+ 	
+ \end{enumerate}
+ 
+  \subsubsection{Krav:}Följande krav ska stödjas av systemet.
+  \paragraph{Scenario:}Användare vill ändra lösenord (ogiltig inmatning)
+  \paragraph{}
+  Förkrav:Användaren är inloggad i systemet.
+  \begin{enumerate}
+ \item  Användaren trycker på “Change Password” i menyn.
+ \item	 En sida visas som innehåller relevanta textboxar.
+ \item	Användaren fyller i nuvarande lösenord i första textboxen.
+ \item	Användaren fyller i det nya lösenordet som inte uppfyller krav 6.2.3 i PUSS12002 version: 1.0 för “BaseBlockSystem” i den andra textboxen.
+ \item	Användaren upprepar det nya lösenordet i den tredje textboxen.
+ \item	Användaren trycker på knappen “Change Password”.
+ \item	Lösenordet ändras inte och ett felmeddelande visas. Användaren skickas tillbaka till steg 2.
+  	
+  \end{enumerate}
+ 
 \section{Kvalitets Krav}
 Läs kap 7.0  “Base block System SRS”:   \textbf{\textit{PUSS12002 version: 1.0}} 
 \section{Projekt Krav}
