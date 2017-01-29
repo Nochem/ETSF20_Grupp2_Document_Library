@@ -118,16 +118,22 @@ En administratör ska kunna lägga till och ta bort användare i systemet. Den s
 
 \section{Terminologi}
 \paragraph{Tidrapport}
+\flushleft
 Dokument som används för att rapportera dem timmar man lagt på olika områden i ett arbete/projekt. Används i samband med löne-och projektredovisning.
 \paragraph{Administratör}
+\flushleft
 Någon som förvaltar en organisation. I detta projektets fall, ett system.
 \paragraph{Förvaltning}
+\flushleft
 Vara ansvarig för ett visst arbete till någons räkning, eller ha hand om en verksamhet.
 \paragraph{Annullera}
+\flushleft
 Upphäva, ogiltigförklara något, t.ex annullera en signering av en tidsrapport.
 \paragraph{Projekt}
+\flushleft
 Ett uppdrag som utförs av en viss arbetsorganisation för att åstadkomma ett visst resultat. 
 \paragraph{Signering}
+\flushleft
 Bekräftar en tidrapport och sätter den i ett stadie där den inte kan ändras om inte projektledare häver signeringen.
 \paragraph{}
 \section{Kontext Diagram}
@@ -135,12 +141,14 @@ Bekräftar en tidrapport och sätter den i ett stadie där den inte kan ändras 
 \section{Funktionella Krav}
 
 \subsection{Administratör:}
-\subsubsection{Krav:}
+\subsubsection*{Krav:}
 När en administratör vill ta bort en projektrgupp ska en varningsruta visas som frågar om admin vill ta bort projektgruppen
 
-\subsubsection{Krav:} Följande krav ska stödjas av systemet.
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet.
 \paragraph{Scenario:}
 Admin vill lägga till en projektgrupp i systemet
+\paragraph{Förkrav:}
+Admin är inloggad
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sidan för hantering av projektgrupper
@@ -150,12 +158,12 @@ Admin vill lägga till en projektgrupp i systemet
 \item Admin ser en uppdatering av sidan
 \end{enumerate}
 
-\subsubsection{Krav:} 
-Följande krav ska stödjas av systemet.
+\subsubsection*{Krav:} 
+Följande scenario ska stödjas av systemet.
 \paragraph{Scenario:}
 Admin vill ta bort minst en projektgrupp i systemet
 \paragraph{Förkrav:}
-Det finns minst en projektgrupp
+Admin är inloggad. Det finns minst en projektgrupp
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sidan för hantering av projektgrupper
@@ -164,11 +172,11 @@ Det finns minst en projektgrupp
 \item Admin ser en uppdatering av sidan
 \end{enumerate}
 
-\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet. 
 \paragraph{Scenario:}
 Admin skall utse projektledare i system utan användare
 \paragraph{Förkrav:}
-Ingen användare finns i systemet. Det finns minst en projektgrupp i systemet
+Admin är inloggad. Ingen användare finns i systemet. Det finns minst en projektgrupp i systemet
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sida för att hantera medlemmar
@@ -177,11 +185,11 @@ Ingen användare finns i systemet. Det finns minst en projektgrupp i systemet
 \item Admin ser en uppdatering av sidan
 \end{enumerate}
 
-\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet. 
 \paragraph{Scenario:}
 Admin skall utse projektledare i system med användare
 \paragraph{Förkrav:}
-Det finns minst en användare i systemet. Det finns minst en projektgrupp i systemet.
+Admin är inloggad. Det finns minst en användare i systemet. Det finns minst en projektgrupp i systemet.
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sidan för hantering av användare
@@ -190,9 +198,11 @@ Det finns minst en användare i systemet. Det finns minst en projektgrupp i syst
 \item Admin ser en uppdatering av sidan
 \end{enumerate}
 
-\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet. 
 \paragraph{Scenario:}
 Admin vill lägga till en användare i systemet
+\paragraph{Förkrav:}
+Admin är inloggad. 
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sidan för hantering av användare
@@ -204,14 +214,14 @@ Admin vill lägga till en användare i systemet
 \item Admin ser en uppdatering av sidan
 \end{enumerate}
 
-\subsubsection{Krav:} Admin ska kunna ta bort flera medlemmar samtidigt genom att kryssa i en ruta för vardera medlem som ska raderas. Sedan ska admin trycka på en knapp för att ta bort dessa.
-\subsubsection{Krav:} Admin ska inte kunna ta bort sig själv
+\subsubsection*{Krav:} Admin ska kunna ta bort flera medlemmar samtidigt genom att kryssa i en ruta för vardera medlem som ska raderas. Sedan ska admin trycka på en knapp för att ta bort dessa.
+\subsubsection*{Krav:} Admin ska inte kunna ta bort sig själv
 
-\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet. 
 \paragraph{Scenario:}
 Admin vill ta bort användare i systemet
 \paragraph{Förkrav:}
-Det finns minst en användare i systemet
+Admin är inloggad. Det finns minst en användare i systemet
 \paragraph{}
 \begin{enumerate}
 \item Admin går till sidan för hantering av användare
@@ -222,14 +232,13 @@ Det finns minst en användare i systemet
 
 \subsection{Projektledare:}
 
-\subsubsection{Krav} En projektledare ska kunna tilldela roller till projektmedlemmarna i projektgruppen.
+\subsubsection*{Krav:} En projektledare ska kunna tilldela roller till projektmedlemmarna i projektgruppen.
 
-\paragraph{}
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Följande scenario stöds av systemet
 \paragraph{Scenario:}
 Projektleader tilldelar roll till projektmedlem.
-\paragraph{Förkrav}
+\paragraph{Förkrav:}
 Användare är projektledare i gruppen.
 \begin{enumerate} 
 \item Projektledare klickar på "Main".
@@ -241,14 +250,12 @@ Användare är projektledare i gruppen.
 \end{enumerate}
 
 \paragraph{}
-\subsubsection{Krav}
-	Projektledaren kan inte tilldela mer än en roll till en medlem i projektgruppen.
+\subsubsection*{Krav:}
+Projektledaren kan inte tilldela mer än en roll till en medlem i projektgruppen.
 
-\paragraph{}
-\subsubsection{Krav}
-	Projektledaren ska kunna ändra projektmedlemmarnas roller i projektgruppen.
-\paragraph{}
-\subsubsection{Krav}
+\subsubsection*{Krav:}
+Projektledaren ska kunna ändra projektmedlemmarnas roller i projektgruppen.
+\subsubsection*{Krav:}
 De roller som ska finnas tillgängliga är som följande:
 \begin{itemize}
 \item Projektgrupp
@@ -257,17 +264,15 @@ De roller som ska finnas tillgängliga är som följande:
 \item Testgrupp
 \end{itemize}
 
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Projektledaren ska kunna signera och godkänna tidrapporter för varje medlem i gruppen.
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Följande scenario stöds av systemet.
-\paragraph{Scenario}
+\paragraph{Scenario:}
 Projektledare ska signera veckorapporter.
-\paragraph{Förkrav}
-Användare är projektledare i gruppen.
+\paragraph{Förkrav:}
+Användare är inloggad. Användare är projektledare i gruppen.
 \begin{enumerate}
 \item Projektledaren klickar på “Time Reporting”.
 \item Projektledaren klickar på “Sign Time Reports”.
@@ -276,27 +281,19 @@ Användare är projektledare i gruppen.
 \item När Projektledaren har signerat rapporterna kommer den tillbaka till en uppdaterad lista av rapporterna.
 \end{enumerate}
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Signeringen av tidrapport sker veckovis.
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Projektledarens egna tidrapport signeras direkt vid tryckning av submit-knappen.
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection{Krav:}
 Listan för veckorapporter ska innehålla namn, rapporterad tid per aktivitet, veckonummer, grupptillhörighet och en kryssruta per rapport.
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Följande scenario stöds av systemet.
-\paragraph{Scenario} Annullering av redan signerad tidrapport.
-\paragraph{Förkrav} Projektledaren är inloggad.
+\paragraph{Scenario:} Annullering av redan signerad tidrapport.
+\paragraph{Förkrav:} Användare är inloggad. Projektledaren är inloggad.
 \begin{enumerate}
 \item Projektledare klickar på “Time reporting”.
 \item Projektledare klickar på “Unsign reports”.
@@ -306,7 +303,7 @@ Följande scenario stöds av systemet.
 
 \paragraph{}
 
-\subsubsection{Krav}
+\subsubsection*{Krav:}
  Projektledaren ska, i menyn, ha följande länkar:
  \begin{itemize}
  \item “Organize Group”
@@ -317,14 +314,12 @@ Följande scenario stöds av systemet.
 
 \paragraph{}
 
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Projektledare ska kunna generera sammanställning över all tid som rapporterats i projektet.
 \paragraph{-}
 Sammanställningen ska kunna användas för att producera en sammanställning av statistik.
 
-\paragraph{}
-
-\subsubsection{Krav}
+\subsubsection*{Krav:}
 Projektledaren ska kunna se statistik för tidsrapporter i projektet för varje medlem.
 \paragraph{}
 Tidsrapporter ska kunna summeras och visas per:
@@ -335,10 +330,11 @@ Tidsrapporter ska kunna summeras och visas per:
 \item Vecka
 \end{itemize}
 \subsection{Användare:}
- \subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt den är medlem i.
- \paragraph{Scenario:} Användare vill skriva en tidrapport
-  \paragraph{ }
-  Förkrav: Användare är inloggad i systemet.
+\subsubsection{Krav:} En användare ska kunna tidrapportera till det projekt den är medlem i.
+\subsubsection{Krav:} Följande scenario ska stödjas av systemet.
+\paragraph{Scenario:} Användare vill skriva en tidrapport.
+\paragraph{Förkrav:}
+Användare är inloggad i systemet.
  
  \begin{enumerate}
 \item	Användare är inloggad i systemet.
@@ -351,14 +347,14 @@ Tidsrapporter ska kunna summeras och visas per:
  	
  \end{enumerate}
  
- \subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna uppdatera osignerade tidrapporter i det projektet.
- \subsubsection{Krav:} En användare som är medlem i ett projekt ska kunna ta bort osignerade tidrapporter i det projektet.
-\subsubsection{Krav:}En användare ska kunna se all den tid som användaren har rapporterat.
-\subsubsection{Krav:}En användare får endast ha ingen eller en roll i projektgruppen.
-\subsubsection{Krav:} Följande krav ska stödjas av systemet.
+ \subsubsection*{Krav:} En användare som är medlem i ett projekt ska kunna uppdatera osignerade tidrapporter i det projektet.
+ \subsubsection*{Krav:} En användare som är medlem i ett projekt ska kunna ta bort osignerade tidrapporter i det projektet.
+\subsubsection*{Krav:}En användare ska kunna se all den tid som användaren har rapporterat.
+\subsubsection*{Krav:}En användare får endast ha ingen eller en roll i projektgruppen.
+\subsubsection*{Krav:} Följande scenario ska stödjas av systemet.
 \paragraph{Scenario:}Användare vill uppdatera i tidrapport
-\paragraph{}
-Förkrav: Användare är inloggad i systemet, tidsrapport är osignerad.
+\paragraph{Förkrav:}
+Användare är inloggad i systemet, tidsrapport är osignerad.
  \begin{enumerate}
  \item Användaren klickar på “Time Reporting”.
  \item	Användaren klickar på “Edit time report”.
@@ -371,20 +367,21 @@ Förkrav: Användare är inloggad i systemet, tidsrapport är osignerad.
  \item	“Time Reporting” sidan visas.
  	
  \end{enumerate}
- \subsubsection{Krav:}Följande krav ska stödjas av systemet.
+ \subsubsection*{Krav:}Följande scenario ska stödjas av systemet.
  \paragraph{Scenario:}Användare vill se en sammanfattning av sin rapporterade tid.
+ \paragraph{Förkrav:}
+ Användaren är inloggad i systemet.
  \paragraph{}
- Förkrav:Användaren är inloggad i systemet.
  \begin{enumerate}
 \item  Användaren klickar på “Time Reporting” i menyn.
 \item  En ny sida visas som innehåller alternativ för tidrapportering samt en sammanställning för den totalt rapporterade tiden för användaren i form av en tabell.
 
  \end{enumerate}
- \subsubsection{Krav:} Följande krav ska stödjas av systemet.
+ \subsubsection*{Krav:} Följande scenario ska stödjas av systemet.
  \paragraph{Scenario:}Användare vill ändra lösenord.
+ \paragraph{Förkrav:}
+ Användare är inloggad i systemet.
  \paragraph{}
- Förkrav: Användare är inloggad i systemet.
- 
  \begin{enumerate}
  \item	Användaren trycker på “Change Password” i menyn.
  \item	En sida visas som innehåller relevanta textboxar.
@@ -396,10 +393,11 @@ Förkrav: Användare är inloggad i systemet, tidsrapport är osignerad.
  	
  \end{enumerate}
  
-  \subsubsection{Krav:}Följande krav ska stödjas av systemet.
+  \subsubsection*{Krav:}Följande scenario ska stödjas av systemet.
   \paragraph{Scenario:}Användare vill ändra lösenord (ogiltig inmatning)
-  \paragraph{}
-  Förkrav:Användaren är inloggad i systemet.
+  \paragraph{Förkrav:}
+Användaren är inloggad i systemet.
+\paragraph{}
   \begin{enumerate}
  \item  Användaren trycker på “Change Password” i menyn.
  \item	 En sida visas som innehåller relevanta textboxar.
