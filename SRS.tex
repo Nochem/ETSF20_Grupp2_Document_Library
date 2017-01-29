@@ -98,18 +98,116 @@
 % -------------------------------------------------------------------------------------------------------------
 \section{Inledning}
 \section{Referensdokument}
+Base block System SRS: \textbf{\textit{PUSS12002 version: 1.0}}  gäller för alla punkter. Det som står i detta dokument gäller om det inte är specificerat i respektive underrubrik att det som står i \textbf{\textit{PUSS12002 version: 1.0}}  utgår för specifik del.
+
 \section{Bakgrund och Mål}
+
 \subsection{Huvudmål:}
+De huvudsakliga målet med systemet är att erbjuda ett funktionellt tidrapporteringssystem som bygger vidare på ett redan givet “BaseBlockSystem”. Detta ska kunna användas av projektgrupper för att enkelt kunna rapportera in arbetstid.
 \subsection{Aktörer och deras mål:}
+Följande huvudaktörer använder systemet:
 \subsubsection{Användare:}
+En användare ska ha en roll i projektgruppen. Den ska kunna tidsrapportera, ändra en osignerad tidsrapport. Användaren ska kunna se en sammanställning av sin totala rapporterade tid. Det huvudsakliga målet för en användare är att på ett simpelt sätt kunna tidsrapportera.
 \subsubsection{Projektledare:}
+En projektledare är en specifik användare som har tilldelats rollen “Projektledare” av administratören. En projektledare ska, utöver det en användare kan göra, kunna tilldela de olika rollerna till användarna. Projektledare ska kunna signera och annullera rapporter från övriga projektmedlemmar. Projektledaren ska kunna se en sammanställning av all den totala tid som rapporterats i projektet. De huvudsakliga målen för en projektledare är att kunna rapportera tid, signera tidsrapporter och tilldela roller till projektmedlemmarna. 
 \subsubsection{Administratör:}
+En administratör ska kunna lägga till och ta bort användare i systemet. Den ska även kunna tilldela rollen “Projektledare” till användare. Administratören ska kunna skapa och ta bort projektgrupper och kunna tilldela användare till dessa projektgrupper. Det huvudsakliga målen för en administratör är att kunna lägga till och ta bort användare, lägga till och ta bort projektgrupper och kunna tilldela rollen “Projektledare”.
+
 \section{Terminologi}
 \section{Kontext Diagram}
+
 \section{Funktionella Krav}
+
 \subsection{Administratör:}
+\subsubsection{Krav:}
+När en administratör vill ta bort en projektrgupp ska en varningsruta visas som frågar om admin vill ta bort projektgruppen
+
+\subsubsection{Krav:} Följande krav ska stödjas av systemet.
+\paragraph{Scenario:}
+Admin vill lägga till en projektgrupp i systemet
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sidan för hantering av projektgrupper
+\item Admin väljer att lägga till projektgrupp
+\item Admin uppmanas att mata in namn på projektgrupp
+\item Projektgrupp skapas
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
+\subsubsection{Krav:} 
+Följande krav ska stödjas av systemet.
+\paragraph{Scenario:}
+Admin vill ta bort minst en projektgrupp i systemet
+\paragraph{Förkrav:}
+Det finns minst en projektgrupp
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sidan för hantering av projektgrupper
+\item Admin markerar vilken/vilka projektgrupper som ska tas bort
+\item Projektgruppen/grupperna som valts raderas
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
+\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\paragraph{Scenario:}
+Admin skall utse projektledare i system utan användare
+\paragraph{Förkrav:}
+Ingen användare finns i systemet. Det finns minst en projektgrupp i systemet
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sida för att hantera medlemmar
+\item Admin lägger till användare i en projektgrupp
+\item Admin tilldelar användaren rollen projektledare
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
+\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\paragraph{Scenario:}
+Admin skall utse projektledare i system med användare
+\paragraph{Förkrav:}
+Det finns minst en användare i systemet. Det finns minst en projektgrupp i systemet.
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sidan för hantering av användare
+\item Admin utser en användare och tilldelar denna rollen projektledare
+\item Användaren har enbart rollen projektledare
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
+\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\paragraph{Scenario:}
+Admin vill lägga till en användare i systemet
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sidan för hantering av användare
+\item Admin väljer att lägga till en användare
+\item Admin uppmanas att mata in namn på den nya användaren
+\item Admin uppmanas att mata in e-post som kopplas till den nya användaren
+\item Användaren skapas med valt användarnamn och e-post
+\item Användaren får e-post med användarnamn och slumpat lösenord
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
+\subsubsection{Krav:} Admin ska kunna ta bort flera medlemmar samtidigt genom att kryssa i en ruta för vardera medlem som ska raderas. Sedan ska admin trycka på en knapp för att ta bort dessa.
+\subsubsection{Krav:} Admin ska inte kunna ta bort sig själv
+
+\subsubsection{Krav:} Följande krav ska stödjas av systemet. 
+\paragraph{Scenario:}
+Admin vill ta bort användare i systemet
+\paragraph{Förkrav:}
+Det finns minst en användare i systemet
+\paragraph{}
+\begin{enumerate}
+\item Admin går till sidan för hantering av användare
+\item admin markerar vilken/vilka användare som ska raderas
+\item Användarna raderas ur systemet
+\item Admin ser en uppdatering av sidan
+\end{enumerate}
+
 \subsection{Projektledare:}
 \subsection{Användare:}
-\section{Kvalitet Krav}
+\section{Kvalitets Krav}
+Läs kap 7.0  “Base block System SRS”:   \textbf{\textit{PUSS12002 version: 1.0}} 
 \section{Projekt Krav}
+Läs kap 8.0  “Base block System SRS”:   \textbf{\textit{PUSS12002 version: 1.0}} 
 \end{document}
