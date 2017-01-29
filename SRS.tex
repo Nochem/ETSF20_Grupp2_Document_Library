@@ -1,0 +1,58 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}             % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}      % ... or a4paper or a5paper or ... 
+\usepackage[utf8]{inputenc}             
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+%frame=tb
+\lstset{frame=none ,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{SRS - Software Requirements Specification}
+\author{Grupp 2}
+%\date{}                                           % Activate to display a given date or no date
+
+
+%--------------------------------------------------------------------------------------------------------
+%DOCUMENT START
+%--------------------------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\lstset{language=Java}
+
+\section{Inledning}
+\section{Referensdokument}
+\section{Bakgrund och Mål}
+\section{Terminologi}
+\section{Kontext Diagram}
+\section{Funktionella Krav}
+\section{Kvalitet Krav}
+\section{Projekt Krav}
+
+\end{document}
