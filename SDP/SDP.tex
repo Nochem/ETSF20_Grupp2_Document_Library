@@ -41,7 +41,7 @@
 % Document Version													%
 \newcommand{\documentVersion}[1]{\centering \small{v.#1} \\[1.0cm]}	 		%
 																%
-% Title															%
+% Title																			%
 \makeatletter                           											%
 \def\printtitle{%                       											%
     {\centering \@title\par}}												%
@@ -300,6 +300,7 @@ Specifikationer av programhjälpmedel, tekniker och metoder
 
 \subsection*{Design- och kodningsstandarder}
 	\begin{itemize}
+	\item Gruppens dokumentmall ska användas.
 	\item "Designen följer SDL88" <---- Stulet och vad är SDL88 för något?
 	\item Variabelnamn skall vara självförklarande och på engelska <---- också stulet men tycker jag att vi behåller
 \end{itemize}
@@ -309,7 +310,8 @@ Specifikationer av programhjälpmedel, tekniker och metoder
 \section{Konfigurationshantering}
 %{\color{red}{Måste läga till mer men det kommer räka tills vidare}} 
 \subsection*{Översikt}
-Projektet kommer implementera ett arbetsflöde där konfigurationshanteringsystemet Git integreras. Alla konfigurationsenheter som går i baseline samt alla dokument och systemenheter där utveckling pågår ska lagras i ett projektbibliotek. Mötesdokument kommer också finns tillgängligt i projektbiblioteket. 
+Projektet kommer följa ett arbetsflöde där konfigurationshanteringsystemet Git
+integreras. Alla konfigurationsenheter som går i baseline samt alla dokument och systemenheter där utveckling pågår ska lagras i ett projektbibliotek. Mötesdokument kommer också finns tillgängligt i projektbiblioteket.
  
 \subsection*{Projektbiblioteket}
 \begin{itemize}
@@ -317,20 +319,22 @@ Projektet kommer implementera ett arbetsflöde där konfigurationshanteringsyste
 \item Arkiven kommer består av två delar: Ett konfigurationsbibliotek och ett mötesbibliotek.
 \item Alla dokument och systemkomponenter som definieras i CML:n kommer lagras i konfigurationsbiblioteket.
 \item Alla mötesprotokoll och agenda kommer lagras i mötesbiblioteket.
+\item Det kommer finnas tre grenar av projektbibleoteket (dvs. master,
+  $\alpha$ och $\beta$) under projektet.
+\item Dokument- och systemenhetsversion nummer ändras bara om den läggs till
+eller ändras i master-grenen.
 \end{itemize}
 
 \subsection*{Arbetsflödet}
 \begin{itemize}
-\item Det kommer finnas tre grenar av projektbibleoteket (dvs. master,
-  $\alpha$ och $\beta$) under projektet.
+
 \item Master-grenen av projektbiblioteket kommer finnas tillgängligt via gruppens Github.
-	%
 	\begin{itemize}
 	\item FKG har ansvar för beslut om när master ska ändras.
 	\item Den ska bara innehålla baseline dokument och baseline systemenheter.
 	\item ``Hotfixes'' kan tillkomma om en konfigurationsenhet i baseline måste ändras.
 	\end{itemize}
-	%
+
 \item $\alpha$-gren innehåller konfigurationsenheterna som utvecklas.
 	\begin{itemize}
 	\item SG har ansvar för $\alpha$.
@@ -342,19 +346,15 @@ Projektet kommer implementera ett arbetsflöde där konfigurationshanteringsyste
 	\end{itemize}
 	
 \item $\beta$-grenen är en gren från master där rekursivtestning äger rum.
-	%
 	\begin{itemize}
 	\item TG har ansvar för $\beta$. 
 	\item $\beta$ tar i mot enheter från $\alpha$-grenen. 
 	\item TG fattar beslut om ett dokument eller en systemenhet ska till FKG för att integrera i master eller om den måste utvecklas mer. 
 	\end{itemize}
-	%
 	
 \end{itemize}
 
 \section{Regler}
-% group time trumps worktime in the planning
-% one question to expert per group
 Projektgruppen har via möten etablerat vissa regler som kommer påverka hur arbetet förs.
 De gemensamma regler som vedertagits är: {\color{red}{vedertagits: stavning?}}
 \begin{itemize}
@@ -363,7 +363,10 @@ De gemensamma regler som vedertagits är: {\color{red}{vedertagits: stavning?}}
 \item Alla projektmedlemmar skall kontrollera sin mejl och discord dagligen. 
 \item Alla projektmedlemmar har ett eget ansvar att hålla sig informerad och att informera.
 \item Man meddelar i förhand om man inte kan komma på ett möte. Att meddela via ombud är fullt acceptabelt.
-\item Inför informell och formell granskning skall -alla- läsa -alla- dokument.
+\item Inför formell granskning skall -alla- läsa -alla- dokument. % tog ut ``informell och''
+\item Gruppen arbetstider är inte obligitoriska. Tidsplanering för specifika
+dokument- eller funktionsutveckling ska prioritiseras.
+\item Välja en person att ställa en fråga till experterna. 
 \end{itemize}
 
 \section{Uppföljning och kvalitetsutvärderingsprocess}
