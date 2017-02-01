@@ -98,14 +98,11 @@
 % -------------------------------------------------------------------------------------------------------------
 
 \section{Inledning}
-Detta dokument beskriver utvecklingsmodell och utvecklingsplan för {\color{red}{(Namn på produkt)-projektet}}. <--- Not: detta är direkt stulet {\color{red}{(Namn på produkt) (är)/(kommer bli)}} ett system för tidsrapportering för större projekt baserat på ``Baseblock system''. {\color{red}{(Namn på produkt)}} kommer utvecklas av studenter på kursen "Programvaruutveckling för stora projekt" vid Lunds Tekniska Högskola.
+Detta dokument beskriver utvecklingsmodell och utvecklingsplan för {\color{red}{(Namn på produkt)-projektet}}. {\color{red}{(Namn på produkt)}} kommer bli ett system för tidsrapportering för större projekt baserat på ``Baseblock system''. {\color{red}{(Namn på produkt)}} kommer utvecklas av studenter på kursen "Programvaruutveckling för stora projekt" vid Lunds Tekniska Högskola.
 
 \section{Referensdokument}
-{\color{red}{Referera här till (??????) Referens till handledningen kanske? Baseblock System?}}\\
-{\color{red}{Referera till handledningen, CML SRS och SVVS... Tror jag...}}
-{\color{red}{PUSP174210, PUSP174212, PUSP174213}}
+{\color{red}{BASEBLOCKSYSTEM Dokumentet}}
 \section{Utvecklingsplan}
-Beroende på vad det är som refereras i föregående stycke så förändras innehållet här. Med antagande att det är handledningen som refereras: Skriv om något möte/dokument utgår (hittills inga)
 
 \subsection*{Dokument}
 
@@ -138,7 +135,6 @@ Projektetsslutrapport & Project Final Report & PFR \\
 %{\color{red}{Lägga till Konfigurationsenheteslista?}}
 
 \section{Personalorganisation}
-{\color{red}{NOTERA: Nämda dokument i nedanstående text kan ersättas med sina koder när dokumenttabellen i stycket ovan är klart}}
 Följande roller definjeras i projektplanen: 
 \begin{itemize}
 \item Kund
@@ -183,7 +179,7 @@ Experter finns tillgängliga för projektet för ingående frågor gällande Kra
 % Systemansvariga -> systemansvariga ?
 % förändringskontrollsgrupp -> förändringskontrollgrupp ?
 % \item FKG består av Benjamin, Carl, Marlina, Andreas, Gregory ?
-Under detta projekt kommer kombinationen av Systemansvariga och projektledare agera förändringskontrollsgrupp. Denna är ansvarig för konfigurationshanteringen. Huvudansvariga är de systemansvariga men projektledarna är inblandade för att kunna fatta beslut om ändringsåtgärder som kräver resurs- eller planeringsändringar.
+Under detta projekt kommer kombinationen av Systemansvariga och Projektledare agera förändringskontrollsgrupp. Denna är ansvarig för konfigurationshanteringen. Huvudansvariga är de systemansvariga men projektledarna är inblandade för att kunna fatta beslut om ändringsåtgärder som kräver resurs- eller planeringsändringar.
 \begin{itemize}
 \item Förändringskontrollgruppen refereras hädanefter som FKG. 
 \end{itemize}
@@ -192,50 +188,42 @@ Under detta projekt kommer kombinationen av Systemansvariga och projektledare ag
 Projektledargruppen har det övergripande administrativa ansvaret för projektet och är ytterst ansvariga för slutprodukten. De skall producera dokument som detaljerar: Tidsplan, Utvecklingsplan, Konfigurationsenheter, Projektets slutrapport och Systemets specifikation.
 Projektledargruppen skall även ansvara för att övriga gruppmedlemmar har:
 \begin{itemize}
-\item nödvändig utbildning och  information
-\item arbetsuppgifter
-\item en jämn arbetsbelastning
+\item Arbetsuppgifter
+\item Nödvändig utbildning och  information
+\item En jämn arbetsbelastning
 \end{itemize}
 Vidare skall projektledargruppen:	
 \begin{itemize}	 
-\item kontrollera att tidplanen följs och håller
-\item ansvara för kontakterna med kunden, granskaren och sektionschefen
-\item Sammankall till möten
+\item Kontrollera att tidplanen följs och håller
+\item Ansvara för kontakterna med kunden, granskaren och sektionschefen
+\item Sammankalla till möten
 \item Ansvara för dokumentbibliotekets tillgänglighet och organisation
 \item Kontrollera och ansvara för projektmedlemmarnas tidsrapportering
 \end{itemize}
 Projektledare i detta projekt är Andreas Mårdén och Gregory Austin.	
-\begin{itemize}
-\item Projektledargruppen kommer hädanefter refereras till som PG.
-\end{itemize}
+Projektledargruppen kommer hädanefter refereras till som PG.
+
 
 \subsection*{Systemgrupp}
-Systemgruppen består av de systemansvariga projektmedlemmarna. Dessa är ansvariga för att leda det tekniska arbetet och slutproduktens design. Systemgruppen skall tillsammans med utvecklingsgruppen producera dokument såsom Kravspecifikation, Högnivådesign och Lågnivådesign. De skall även ansvara för god konsistens mellan Kravspecifikationen och Testspecifikationen. De skall också ha hög förståelse för grundsystemet "Baseblock system" och den produkt som skapas.\\
-{\color{red}{------Ansvar: (sammanskriv senare detta med resten av texten)}}  % förstår inte vad menas med det här
-\begin{itemize}	 
+Systemgruppen består av de systemansvariga projektmedlemmarna. Dessa är ansvariga för att leda det tekniska arbetet och slutproduktens design. Systemgruppen skall tillsammans med Utvecklingsgruppen producera dokument såsom Kravspecifikation, Högnivådesign och Lågnivådesign. 
+De skall även ansvara för: 
+\begin{itemize}
+\item God konsistens mellan Kravspecifikationen och Testspecifikationen 
+\item Att ha hög förståelse för grundsystemet "Baseblock system" och den produkt som skapas	 
 \item Ansvara för gränssnitten mellan olika delar av systemet
 \item Övervaka och styra all utveckling för att försäkra att systemets delar blir så likvärdiga som möjligt
 \end{itemize}
 % i detta projekt
 Systemansvariga är Benjamin Holmqvist, Carl Rikner och Marlina Degirmenci. 
-\begin{itemize}
-\item Systemgruppen kommer hädanefter refereras till som SG.
-\end{itemize}
+Systemgruppen kommer hädanefter refereras till som SG.
 
 \subsection*{Utvecklingsgrupp}
-Utvecklingsgruppen kommer ta hand om utvecklingen av det system som skall levereras. Utvecklingsgruppen skall producera delkapitel för sin funtionalitet i dokumenten Kravspecifikation, Högnivådesign och Lågnivådesign. De är huvudansvariga för att utveckla funktionalitet enligt kravspecifikationen. Utvecklare i detta projekt är: Carl Gustavsson, Christian Shehadeh, Javier Poremski, Johannes Sunnanväder, Maurits Johansson, Richard Elvhammar, Sebastian Bergdahl, Simon Farre. \\
-{\color{red}{------Unit-testa sin egen kod. }}
-\begin{itemize}
-\item Utvecklingsgruppen kommer hädanefter refereras till som UG.
-\end{itemize}
+Utvecklingsgruppen kommer ta hand om utvecklingen av det system som skall levereras. Utvecklingsgruppen skall producera delkapitel för sin funtionalitet i dokumenten Kravspecifikation, Högnivådesign och Lågnivådesign. De är huvudansvariga för att utveckla funktionalitet enligt kravspecifikationen och att utföra unit-tester. Utvecklare i detta projekt är: Carl Gustavsson, Christian Shehadeh, Javier Poremski, Johannes Sunnanväder, Maurits Johansson, Richard Elvhammar, Sebastian Bergdahl, Simon Farre.
+Utvecklingsgruppen kommer hädanefter refereras till som UG.
 
 \subsection*{Testgrupp}
-Testgruppen har ansvaret för testningen av det utvecklade systemet. De skall producera dokumenten ``Testspecifikation'', ``Testinstruktioner'' samt en avslutande rapport för produktens testresultat. En utpekad testledare skall vidare ha ansvaret för konsistens mellan testspecifikationen och kravspecifikationen tillsammans med en utvald systemledare. Testgruppen består av: Emil Kristiansson, Erik Rosenström och Simon Plato.\\
-{\color{red}{--------Producera monitorfiler för alla funktionstest (?)}}\\
-{\color{red}{-------Föra versionshanterig av en massa appendix???}}
-\begin{itemize}
-\item  Testgruppen kommer hädanefter refereras till som TG.
-\end{itemize}
+Testgruppen har ansvaret för testningen av det utvecklade systemet. De skall producera dokumenten ``Testspecifikation'', ``Testinstruktioner'' samt en avslutande rapport för produktens testresultat. En utpekad testledare skall vidare ha ansvaret för konsistens mellan testspecifikationen och kravspecifikationen tillsammans med en utvald systemledare. Testgruppen består av: Emil Kristiansson, Erik Rosenström och Simon Plato.
+Testgruppen kommer hädanefter refereras till som TG.
 
 \section{Tidplan}
 
@@ -287,6 +275,7 @@ Specifikationer av programhjälpmedel, tekniker och metoder
 	\item Discord för kommunikation i gruppen.
 	\item Git för konfigurationsstyrning och dokumentbibliotek.
 	\item Github.com som servrar till gruppens Git-arkiver och grenar.
+	\item E-puss för att tidsrapportera.
 	\item Apache Tomcat för att implementera servrar.
 	\item MySQL för att implementera databas.
 	\item Eclipse IDE som redan stödjer Apache Tomcat
@@ -301,14 +290,12 @@ Specifikationer av programhjälpmedel, tekniker och metoder
 \subsection*{Design- och kodningsstandarder}
 	\begin{itemize}
 	\item Gruppens dokumentmall ska användas.
-	\item "Designen följer SDL88" <---- Stulet och vad är SDL88 för något?
-	\item Variabelnamn skall vara självförklarande och på engelska <---- också stulet men tycker jag att vi behåller
+	\item Variabelnamn skall vara självförklarande och på Engelska.
 \end{itemize}
 
 
 
 \section{Konfigurationshantering}
-%{\color{red}{Måste läga till mer men det kommer räka tills vidare}} 
 \subsection*{Översikt}
 Projektet kommer följa ett arbetsflöde där konfigurationshanteringsystemet Git
 integreras. Alla konfigurationsenheter som går i baseline samt alla dokument och systemenheter där utveckling pågår ska lagras i ett projektbibliotek. Mötesdokument kommer också finns tillgängligt i projektbiblioteket.
@@ -356,9 +343,9 @@ eller ändras i master-grenen.
 
 \section{Regler}
 Projektgruppen har via möten etablerat vissa regler som kommer påverka hur arbetet förs.
-De gemensamma regler som vedertagits är: {\color{red}{vedertagits: stavning?}}
+De gemensamma regler som vedertagits är: {\color{red}{Återkommer om huruvida "Vedertagits" är korrekt}}
 \begin{itemize}
-\item Man kan då man skickar viktig info via Discord eller mejl begära "Ack". Dessa visar vilka som tagit del av informationen. Vid begärt 		  ack skall dessa inkomma inom 24 timmar.	
+\item Man kan då man skickar viktig info via Discord eller mejl begära "Ack". Dessa visar vilka som tagit del av informationen. Vid begärt ack skall dessa inkomma inom 24 timmar.
 \item Arbete sker på arbetsdagar, inte helger, såvida inte annats beslutas gemensamt. Med arbetsdagar menas tiden mellan 8 och 16 Måndag till Fredag. Dock så är man välkommen att arbeta vilka tider man själv vill. Men ingen kan kräva andra att arbete utanför arbetsdagar.
 \item Alla projektmedlemmar skall kontrollera sin mejl och discord dagligen. 
 \item Alla projektmedlemmar har ett eget ansvar att hålla sig informerad och att informera.
@@ -378,10 +365,10 @@ dokument- eller funktionsutveckling ska prioritiseras.
 \item Om arbetet går snabbare än beräknat kommer faser och dokument tidigareläggas.
 \item Om arbetet går långsammare än beräknat kommer vi hantera situationen beroende på dess natur.
 \item Vid omgranskning/omarbete kommer vi sträva efter att gruppen så mycket som möjligt fortsätter med arbetet på de delar som är stadigast
-\item Vid tidsbrist i programmeringen kommer SG och PG sättas in som programmerare
-\item Vid tidsbrist i testningen (Något vi förutser) kommer utvecklare sättas in som testare
-\item Projektets kvalité kommer försäkras genom de informella granskningar som kommer ske enligt schemat (minst en per fas) och genom testning
-\item Denna testning kommer att utföras av UG (unit-tests) och TG (black-box testning)
+\item Vid tidsbrist i programmeringen kommer SG och PG sättas in som programmerare.
+\item Vid tidsbrist i testningen (Något vi förutser) kommer utvecklare sättas in som testare.
+\item Projektets kvalité kommer försäkras genom de informella granskningar som kommer ske enligt schemat (minst en per fas) och genom testning.
+\item Testning kommer att utföras av UG (unit-tests) och TG (black-box testning).
 \end{itemize}
 
 \section{Riskanalys}
